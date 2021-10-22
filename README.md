@@ -34,7 +34,7 @@ Writing to the console the value of the next thread = rectangle.\
 In a static variable -> ```wynik_prostokaty``` from the main class we sum the result.
 ```java
 public void run() {
-	w_calka = mojPrzyklad.funkcja1(a+i*dx);
+	w_calka = mojPrzyklad.exampleTen(a+i*dx);
 	System.out.println("M_Prostakat nr-" + i + " ma wartosc calki = " + w_calka);
 	main_task_1.wynik_prostokaty += w_calka;
 }
@@ -42,9 +42,9 @@ public void run() {
 ### This method in class main_task_1
 ```java
 // parametrs
-    	float xp = 1;
-	float xk = 4;
-	int n = 20;
+    	float xp = (float) 1.3;
+	float xk = (float) 2.5;
+	int n = 4;
 	float dx = (xk - xp)/n;
 // main loop - creating threads
     	for(int i = 1; i <= n; i++) {
@@ -60,14 +60,21 @@ By analogy with rectangle method, but with a some difference.\
 1) Another formula for calculating the trapezoidal area = thread
 ```java
 public void run() {
-	w_calka = (mojPrzyklad.funkcja1(a+i*dx)+mojPrzyklad.funkcja1(a+(i+1)*dx))*dx/2;
+	if(i == 0 || i == n) {
+		w_calka = mojPrzyklad.exampleTen(a+i*dx)/2;
+	} else {
+		w_calka = mojPrzyklad.exampleTen(a+i*dx);
+	}
 	...
 ```
 2) Main loop starts with 0
 ```java
 for(int i = 0; i <= n; i++) {
-	new M_trapezow(wynik_trapezy, i, xp, dx);
+	new M_trapezow(wynik_trapezy, i, xp, dx, n);
 }
+
+wynik_trapezy *= dx;
+System.out.println("Metoda trapezow: Pole --> " + wynik_trapezy);
 ```
 ## Class for Simpson method
 By analogy with previous methods, but with some difference.\
@@ -75,11 +82,11 @@ By analogy with previous methods, but with some difference.\
 ```java
 public void run() {
 	if(i == 0 || i == n) {
-		w_calka = mojPrzyklad.funkcja1(a+i*dx);
+		w_calka = mojPrzyklad.exampleTen(a+i*dx);
 	} else if(i%2 == 0) {
-		w_calka = 2*mojPrzyklad.funkcja1(a+i*dx);
+		w_calka = 2*mojPrzyklad.exampleTen(a+i*dx);
 	} else {
-		w_calka = 4*mojPrzyklad.funkcja1(a+i*dx);
+		w_calka = 4*mojPrzyklad.exampleTen(a+i*dx);
 	}
 	...
 ```
@@ -90,8 +97,8 @@ public void run() {
 ```
 ## RESULTS
 1) Without join()
-
+![image](https://user-images.githubusercontent.com/72127610/138532853-bf3c8d4b-8448-4b5b-ac0c-5d5c834438cf.png)
 2) With join()
-
+![image](https://user-images.githubusercontent.com/72127610/138532995-bdde15cf-25fe-4165-b903-ed96dee52e70.png)
 The best method of calculating the integral - method Simpsona.
 
