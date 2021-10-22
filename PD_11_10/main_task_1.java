@@ -21,9 +21,9 @@ public class main_task_1 {
 			new M_prostokatow(wynik_prostokaty, i, xp, dx);
 		}
 		for(int i = 0; i <= n_simpson; i++) {
-			new M_Simpsona(wynik_trapezy, i, xp, dx_simpson, n_simpson);
+			new M_Simpsona(wynik_simpson, i, xp, dx_simpson, n_simpson);
 		}
-		for(int i = 1; i <= n; i++) {
+		for(int i = 0; i <= n; i++) {
 			new M_trapezow(wynik_trapezy, i, xp, dx);
 		}
 				
