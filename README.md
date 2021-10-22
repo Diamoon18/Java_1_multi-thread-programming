@@ -52,3 +52,17 @@ public void run() {
 	System.out.println("---------------Wyniki---------------");
 	System.out.println("Metoda prostokatow: Pole --> " + wynik_prostokaty);
 ```
+## The class for trapezoidal method by analogy with rectangle method, but with a some difference.
+1) Another formula for calculating the trapezoidal area = thread
+```java
+public void run() {
+	w_calka = (mojPrzyklad.funkcja1(a+i*dx)+mojPrzyklad.funkcja1(a+(i+1)*dx))*dx/2;
+	...
+```
+2) Main loop starts with 0
+```java
+for(int i = 0; i <= n; i++) {
+	new M_trapezow(wynik_trapezy, i, xp, dx);
+}
+```
+## Class for Simpson method
