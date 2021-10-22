@@ -7,7 +7,7 @@ First one: ```java M_prostokatow``` - consists in dividing the integration inter
 The accuracy of calculations in all methods depends on the number of these divisions, i.e. rectangles.
 ### Variable initialization
 ```java
-  private float a; // beginning of the integration interval
+  	private float a; // beginning of the integration interval
 	private float dx; // the length of one interval, i.e. the rectangle after the division 
 	
 	private double w_calka; // integral value
@@ -17,11 +17,11 @@ The accuracy of calculations in all methods depends on the number of these divis
 Method start() = run()
 ```java
 public M_prostokatow(double w_calka, int i, float a, float dx){
-		this.a = a;
-		this.dx = dx;
-		this.w_calka = w_calka;
-		this.i = i;
-		start();
+	this.a = a;
+	this.dx = dx;
+	this.w_calka = w_calka;
+	this.i = i;
+	start();
 }
 ```
 ### Method run()
@@ -31,24 +31,24 @@ Writing to the console the value of the next thread = rectangle.\
 In a static variable -> ```wynik_prostokaty``` from the main class we sum the result.
 ```java
 public void run() {
-		w_calka = mojPrzyklad.funkcja1(a+i*dx);
-		System.out.println("M_Prostakat nr-" + i + " ma wartosc calki = " + w_calka);
-		main_task_1.wynik_prostokaty += w_calka;
+	w_calka = mojPrzyklad.funkcja1(a+i*dx);
+	System.out.println("M_Prostakat nr-" + i + " ma wartosc calki = " + w_calka);
+	main_task_1.wynik_prostokaty += w_calka;
 }
 ```
 ### This method in class main_task_1
 ```java
 // parametrs
-    float xp = 1;
-		float xk = 4;
-		int n = 20;
-		float dx = (xk - xp)/n;
+    	float xp = 1;
+	float xk = 4;
+	int n = 20;
+	float dx = (xk - xp)/n;
 // main loop - creating threads
-    for(int i = 1; i <= n; i++) {
-			new M_prostokatow(wynik_prostokaty, i, xp, dx);
-		}
+    	for(int i = 1; i <= n; i++) {
+		new M_prostokatow(wynik_prostokaty, i, xp, dx);
+	}
 // write the result to the console
-    wynik_prostokaty *= dx;
-		System.out.println("---------------Wyniki---------------");
-		System.out.println("Metoda prostokatow: Pole --> " + wynik_prostokaty);
+    	wynik_prostokaty *= dx;
+	System.out.println("---------------Wyniki---------------");
+	System.out.println("Metoda prostokatow: Pole --> " + wynik_prostokaty);
 ```
