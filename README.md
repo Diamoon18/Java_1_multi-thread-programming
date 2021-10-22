@@ -4,7 +4,9 @@
 ## PD_11_10 
 I made three classes for each method to represent the area of one figure as a thread.\
 First one: ```M_prostokatow``` - consists in dividing the integration interval into rectangles and calculating the area of these rectangles.\
-The accuracy of calculations in all methods depends on the number of these divisions, i.e. rectangles.
+The accuracy of calculations in all methods depends on the number of these divisions, i.e. rectangles.\
+### Sample integral in this program:
+![image](https://user-images.githubusercontent.com/72127610/138529944-dd6f5dd9-db5f-4e35-a8fc-fb2ab4706bcd.png)
 ### Variable initialization
 ```java
   	private float a; // beginning of the integration interval
@@ -14,7 +16,8 @@ The accuracy of calculations in all methods depends on the number of these divis
 	private int i; // the iteration number, i.e. the thread or rectangle
 ```
 ### Constructor
-Method start() = run()
+Method start() = run() \
+If you add join() here, threads in the result will not go in random order.
 ```java
 public M_prostokatow(double w_calka, int i, float a, float dx){
 	this.a = a;
@@ -81,7 +84,15 @@ public void run() {
 	...
 ```
 ### main_task_1
-````java
+```java
 	wynik_simpsona *= (dx_simpson/3);
 	System.out.println("Metoda Simpsona: Pole --> " + wynik_simpsona);
 ```
+## RESULTS
+1) Without join()
+![image](https://user-images.githubusercontent.com/72127610/138530782-a7027a46-c471-430b-beaa-34dd903d1cdb.png)
+2) With join()
+![image](https://user-images.githubusercontent.com/72127610/138530835-8e51bf5d-830a-41e7-b804-0b69e64fb3c6.png)
+Method analysis:
+![image](https://user-images.githubusercontent.com/72127610/138529840-02350c77-ee4a-453e-bc5d-9cf8944d83e1.png)
+
