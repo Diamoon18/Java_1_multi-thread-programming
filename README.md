@@ -90,9 +90,8 @@ public void run() {
 ```
 ## RESULTS
 1) Without join()
-![image](https://user-images.githubusercontent.com/72127610/138530782-a7027a46-c471-430b-beaa-34dd903d1cdb.png)
+
 2) With join()
-![image](https://user-images.githubusercontent.com/72127610/138530835-8e51bf5d-830a-41e7-b804-0b69e64fb3c6.png)
-Method analysis:
-![image](https://user-images.githubusercontent.com/72127610/138529840-02350c77-ee4a-453e-bc5d-9cf8944d83e1.png)
+
+The best method of calculating the integral - method Simpsona.
 
