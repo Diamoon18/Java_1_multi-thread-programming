@@ -18,11 +18,11 @@ public class M_Simpsona extends Thread{
 	
 	public void run() {
 		if(i == 0 || i == n) {
-			w_calka = mojPrzyklad.funkcja1(a+i*dx);
+			w_calka = mojPrzyklad.exampleTen(a+i*dx);
 		} else if(i%2 == 0) {
-			w_calka = 2*mojPrzyklad.funkcja1(a+i*dx);
+			w_calka = 2*mojPrzyklad.exampleTen(a+i*dx);
 		} else {
-			w_calka = 4*mojPrzyklad.funkcja1(a+i*dx);
+			w_calka = 4*mojPrzyklad.exampleTen(a+i*dx);
 		}
 		System.out.println("M_simpsona nr-" + i + " ma wartosc calki = " + w_calka);
 		main_task_1.wynik_simpsona += w_calka;
