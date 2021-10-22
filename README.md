@@ -52,7 +52,8 @@ public void run() {
 	System.out.println("---------------Wyniki---------------");
 	System.out.println("Metoda prostokatow: Pole --> " + wynik_prostokaty);
 ```
-## The class for trapezoidal method by analogy with rectangle method, but with a some difference.
+## The class for trapezoidal method 
+By analogy with rectangle method, but with a some difference.\
 1) Another formula for calculating the trapezoidal area = thread
 ```java
 public void run() {
@@ -66,3 +67,21 @@ for(int i = 0; i <= n; i++) {
 }
 ```
 ## Class for Simpson method
+By analogy with previous methods, but with some difference.\
+1) Difference in the field calculation - depending on the parity of the iteration number
+```java
+public void run() {
+	if(i == 0 || i == n) {
+		w_calka = mojPrzyklad.funkcja1(a+i*dx);
+	} else if(i%2 == 0) {
+		w_calka = 2*mojPrzyklad.funkcja1(a+i*dx);
+	} else {
+		w_calka = 4*mojPrzyklad.funkcja1(a+i*dx);
+	}
+	...
+```
+### main_task_1
+````java
+	wynik_simpsona *= (dx_simpson/3);
+	System.out.println("Metoda Simpsona: Pole --> " + wynik_simpsona);
+```
