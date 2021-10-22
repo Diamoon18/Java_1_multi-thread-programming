@@ -16,7 +16,7 @@ public class M_prostokatow extends Thread{
 	}
 	
 	public void run() {
-		w_calka = mojPrzyklad.funkcja1(a+i*dx);
+		w_calka = mojPrzyklad.exampleTen(a+i*dx);
 		System.out.println("M_Prostakat nr-" + i + " ma wartosc calki = " + w_calka);
 		main_task_1.wynik_prostokaty += w_calka;
 	}
