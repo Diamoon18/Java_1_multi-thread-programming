@@ -9,9 +9,9 @@ public class main_task_1 {
 	public static void main(String[] args) {
 		System.out.println("----START----");
 	//// parametry ////
-		float xp = 1;
-		float xk = 4;
-		int n = 20;
+		float xp = (float) 1.3;
+		float xk = (float) 2.5;
+		int n = 4;
 		float dx = (xk - xp)/n;
 		float dx_simpson = dx/2;
 		int n_simpson = 2*n;
@@ -24,7 +24,7 @@ public class main_task_1 {
 			new M_Simpsona(wynik_simpson, i, xp, dx_simpson, n_simpson);
 		}
 		for(int i = 0; i <= n; i++) {
-			new M_trapezow(wynik_trapezy, i, xp, dx);
+			new M_trapezow(wynik_trapezy, i, xp, dx, n);
 		}
 				
 	//// wyniki ////
@@ -37,6 +37,7 @@ public class main_task_1 {
 		wynik_prostokaty *= dx;
 		System.out.println("---------------Wyniki---------------");
 		System.out.println("Metoda prostokatow: Pole --> " + wynik_prostokaty);
+		wynik_trapezy *= dx;
 		System.out.println("Metoda trapezow: Pole --> " + wynik_trapezy);
 		wynik_simpsona *= (dx_simpson/3);
 		System.out.println("Metoda Simpsona: Pole --> " + wynik_simpsona);
