@@ -2,7 +2,7 @@
 ```PD_11_10``` - the first program for NUMERICAL INTEGRATION (methods Simpson, rectangle method, trapezoidal method) \
 ```PD_22_10``` - the second program about Zoo ( real world simulation system ) 
 ## PD_11_10 
-I made three classes for each method to represent the area of one figure as a thread.
+I made three classes for each method to represent the area of one figure as a thread.\
 First one: ```java M_prostokatow``` - consists in dividing the integration interval into rectangles and calculating the area of these rectangles.\
 The accuracy of calculations in all methods depends on the number of these divisions, i.e. rectangles.
 ### Variable initialization
