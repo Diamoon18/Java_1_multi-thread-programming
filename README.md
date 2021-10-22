@@ -96,9 +96,13 @@ public void run() {
 	System.out.println("Metoda Simpsona: Pole --> " + wynik_simpsona);
 ```
 ## RESULTS
-1) Without join()
+1) Without join()\
 ![image](https://user-images.githubusercontent.com/72127610/138532853-bf3c8d4b-8448-4b5b-ac0c-5d5c834438cf.png)
-2) With join()
-![image](https://user-images.githubusercontent.com/72127610/138532995-bdde15cf-25fe-4165-b903-ed96dee52e70.png)
-The best method of calculating the integral - method Simpsona.
+2) With join()\
+![image](https://user-images.githubusercontent.com/72127610/138532995-bdde15cf-25fe-4165-b903-ed96dee52e70.png) \
+The best method of calculating the integral - method Simpsona.\
+Method analysis :
+![image](https://user-images.githubusercontent.com/72127610/138533116-d9ee5d1b-6b4b-45ce-a482-2ca17d9ed0fd.png)
+![image](https://user-images.githubusercontent.com/72127610/138533138-5db662ba-d8b0-4b39-839d-5c916dc489c9.png)
+
 
