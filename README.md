@@ -56,7 +56,7 @@ public void run() {
 	System.out.println("Metoda prostokatow: Pole --> " + wynik_prostokaty);
 ```
 ## The class for trapezoidal method 
-By analogy with rectangle method, but with a some difference.\
+By analogy with rectangle method, but with a some difference.
 1) Another formula for calculating the trapezoidal area = thread
 ```java
 public void run() {
