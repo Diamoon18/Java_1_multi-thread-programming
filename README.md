@@ -106,8 +106,8 @@ Method analysis :
 ![image](https://user-images.githubusercontent.com/72127610/138533138-5db662ba-d8b0-4b39-839d-5c916dc489c9.png)
 
 ## PD_11_10
-Zoo with aviaries with various animals.\ 
-They may or may not be hungry.\ 
+Zoo with aviaries with various animals.\
+They may or may not be hungry.\
 People work in these aviaries, that is, they follow the animals.\
 If there is not enough food, the worker can order supplies.\
 If the animals are very hungry or the number of employees is small, it could be a disaster, so the zoo is closed.\
