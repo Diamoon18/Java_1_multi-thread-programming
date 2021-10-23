@@ -111,3 +111,10 @@ They may or may not be hungry.\
 People work in these aviaries, that is, they follow the animals.\
 If there is not enough food, the worker can order supplies.\
 If the animals are very hungry or the number of employees is small, it could be a disaster, so the zoo is closed.\
+### Results
+![image](https://user-images.githubusercontent.com/72127610/138571508-238671af-615b-465e-b72c-6bcec7176f66.png)
+![image](https://user-images.githubusercontent.com/72127610/138571519-7098434b-5330-43e4-88a3-b9213e4c3bfa.png)
+![image](https://user-images.githubusercontent.com/72127610/138571523-cce8d232-901f-4b10-b833-f38ce323d489.png)
+
+
+
